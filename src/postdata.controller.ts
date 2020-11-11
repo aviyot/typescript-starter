@@ -6,6 +6,7 @@ export class PostDataController {
     @Post()
     postData(@Body('fullName') fullName: any):any {
         this.res = `full name is ${fullName}`
+        return {post: this.res} 
     }
 
     @Get()
