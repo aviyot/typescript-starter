@@ -4,7 +4,7 @@ import {Controller,Post,Body, Get} from '@nestjs/common';
 export class PostDataController {
     res:string;
     @Post()
-    postData(@Body('fullName') fullName: string):any {
+    postData(@Body('fullName') fullName: any):any {
         this.res = `full name is ${fullName}`
     return this.res;
     }
